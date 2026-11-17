@@ -1,0 +1,23 @@
+blockrandom audit log
+tool_version: 0.1.0
+generated_at: 2026-01-01T00:00:00Z
+python_version: 3.12.3
+trial_name: Example trial
+arms: Treatment, Control
+ratio: 1:1
+block_sizes: 4, 6, 8
+strata: site (North, South)
+stratum_count: 2
+n_per_stratum: 40
+total_allocations: 80
+seed_source: file
+seed_sha256: 88c7bd18e04fa9108979f5501644f557433abbb28a337fe72943e7967f34caf5
+seed_value_recorded: no (only the SHA-256 hash above)
+rng: random.Random (Mersenne Twister), per-stratum integer seed derived as SHA-256(seed || NUL || stratum label); all draws use Random.random() only
+outputs_sha256:
+  allocation.csv: 0eba0d4f49b480f96121d1456dd0206fa52247841441d3c91faf184799dca78c
+  methods.txt: aaecfc329c2cc225f7873e03478c447e1573e4b3e32201883ea1bcdfb7d08b5f
+  per_stratum/001-site-north.csv: d755e51368087176f7b93a0cb346ae016abbbf1cf647fce936d641468b0341bd
+  per_stratum/002-site-south.csv: 6c5b0e1e64c10ca224ed9f086247bc24361848bbe8ed5257f697e4928b1532fe
+  sealed.csv: 9d8bd32762e75435f04387a20a540d834ba0dce8bf2dc39a3817920acb46c6f7
+truncated_final_blocks: none
