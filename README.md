@@ -276,6 +276,15 @@ timestamp, an enormous block size, and stale per-stratum files left
 by an earlier run into the same output directory) — all of which must
 fail with clean errors, never tracebacks.
 
+## Use with an AI agent
+
+This repo ships a [SKILL.md](SKILL.md) written to the Agent Skills open
+standard. If your coding agent supports skills, point it at this repo
+and it can install blockrandom, run it for your trial design, and read
+the results for you. The skill works as documented when the repo is
+cloned under its real name (`blockrandom`) — the standard matches a
+skill to its folder name.
+
 ## License
 
 MIT. Free and open source, for science.
