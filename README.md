@@ -111,6 +111,34 @@ $ pip install git+https://github.com/RakTikoo/blockrandom
 Requires Python ≥ 3.10. **Standard library only** — no dependencies.
 Everything runs offline.
 
+Or install the wheel straight from this repo's release assets (no package
+registry involved):
+
+```sh
+pip install https://github.com/RakTikoo/blockrandom/releases/download/v0.1.0/blockrandom-0.1.0-py3-none-any.whl
+```
+
+Or install from the git repo with pipx or uv:
+
+```sh
+pipx install git+https://github.com/RakTikoo/blockrandom.git@v0.1.0
+uv tool install --from git+https://github.com/RakTikoo/blockrandom.git@v0.1.0 blockrandom
+```
+
+With Homebrew (macOS/Linux):
+
+```sh
+brew tap RakTikoo/tools
+brew install RakTikoo/tools/blockrandom
+```
+
+With Scoop (Windows):
+
+```powershell
+scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
+scoop install blockrandom
+```
+
 ## Usage
 
 ```
