@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - name: RakTikoo
+title: "blockrandom: seeded permuted-block randomization lists for small clinical trials"
+version: 0.1.0
+date-released: 2026-11-17
+license: MIT
+url: "https://github.com/RakTikoo/blockrandom"
+repository-code: "https://github.com/RakTikoo/blockrandom"
+abstract: >-
+  Generates seeded permuted-block randomization lists for small
+  clinical trials — stratified, reproducible byte-for-byte from a
+  recorded seed, with a full allocation list, a sealed enrolment
+  list, per-stratum files, an audit log and a ready-to-paste methods
+  paragraph. A seed is required; the tool refuses to invent one.
+  Research and educational tool only; not a medical device. It gives
+  no diagnosis, staging, or dose or treatment advice.
+keywords:
+  - randomization
+  - permuted blocks
+  - clinical trials
+  - reproducibility
+  - stratification

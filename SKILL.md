@@ -1,6 +1,6 @@
 ---
 name: blockrandom
-description: Generate seeded permuted-block randomization lists for small clinical trials — stratified, reproducible byte-for-byte from a recorded seed, with a full allocation list, a sealed enrolment list, an audit log and a ready-to-paste methods paragraph. A seed is required and is never invented by the tool. Use when asked to create a randomization or allocation list, set up permuted-block randomization with strata, or regenerate a trial allocation schedule from its seed.
+description: Generate seeded permuted-block randomization lists for small clinical trials — stratified, reproducible byte-for-byte from a recorded seed, with a full allocation list, a sealed enrolment list, an audit log and a ready-to-paste methods paragraph. A seed is required and is never invented by the tool. Use when asked to create a randomization or allocation list, set up permuted-block randomization with strata, or regenerate a trial allocation schedule from its seed. Not for eGFR calculation (use egfr-batch), lab-unit conversion (use labunits), growth z-scores (use growthz), or de-identification checks (use safeharbor-check).
 license: MIT
 compatibility: Requires Python 3.10+, standard library only, no dependencies. Installing needs network access to GitHub; the tool itself runs fully offline.
 ---

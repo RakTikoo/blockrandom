@@ -1,4 +1,4 @@
-# blockrandom
+# blockrandom — seeded permuted-block randomization lists for clinical trials
 
 **Seeded permuted-block randomization lists for small clinical trials — reproducible, stratified, with a sealed list and an audit log.**
 
@@ -25,6 +25,10 @@ allocation list, a sealed list for enrolment, one file per stratum, an
 audit log, and a ready-to-paste methods paragraph. If you do not state
 a seed, `blockrandom` refuses and tells you why. That refusal is part
 of the product.
+
+**Quick install:** `pip install git+https://github.com/RakTikoo/blockrandom`
+(Python 3.10+, no dependencies, runs offline). Details under
+[Install](#install).
 
 ## Demo
 
