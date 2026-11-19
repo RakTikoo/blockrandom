@@ -1,5 +1,7 @@
 # blockrandom — seeded permuted-block randomization lists for clinical trials
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/RakTikoo/blockrandom)
+
 **Seeded permuted-block randomization lists for small clinical trials — reproducible, stratified, with a sealed list and an audit log.**
 
 > **Research / educational tool. Not a medical device.** `blockrandom`
@@ -138,6 +140,8 @@ With Scoop (Windows):
 scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
 scoop install blockrandom
 ```
+
+**For agent users:** this repository ships a `SKILL.md` for AI agents. Install it with `npx skills add RakTikoo/blockrandom`.
 
 ## Usage
 
