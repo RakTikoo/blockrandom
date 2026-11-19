@@ -562,6 +562,9 @@ def build_audit_log(plan, seed_hash, seed_source, generated_at,
         lines.append(f"  {name}: {file_hashes[name]}")
     truncated = sorted({r.stratum for r in plan.rows
                         if not r.block_complete})
+    if len(plan.block_sizes) == 1:
+        lines.append(
+            "WARNING  : A single block size makes the end of each block predictable and at least two sizes are recommended for a real trial.)"),
     if truncated:
         lines.append(
             "truncated_final_blocks: " + ", ".join(truncated) +

@@ -160,9 +160,10 @@ blockrandom check
 - `--blocks` — block sizes, comma-separated. Every block size must be
   a multiple of the ratio sum (a 2:1 trial needs block sizes that are
   multiples of 3), because every completed block must hold the ratio
-  exactly; the tool refuses a size that cannot. Give **at least two**
-  sizes for a real trial: with one fixed size, the last allocations in
-  each block become predictable. **Required; never guessed.**
+  exactly; the tool refuses a size that cannot. Give at least two sizes
+  for a real trial: with one fixed size, the last allocations in each 
+  block become predictable (a single size is accepted with a warning in 
+  the summary, audit.log, and methods.txt). **Required; never guessed.**
 - `--n-per-stratum` (alias `--n`) — how many allocations each stratum's
   list contains. The total list is this × the number of strata.
 - `--strata` — stratification factors as `name=level,level` chunks
@@ -292,7 +293,7 @@ How, and the limits:
 $ python3 run_tests.py
 ```
 
-38 tests (stdlib `unittest`): exact balance in every completed block
+40 tests (stdlib `unittest`): exact balance in every completed block
 for equal, unequal and three-arm ratios across several seeds;
 byte-for-byte reproducibility through the CLI (including the audit log
 under a pinned timestamp, and seed-file ≡ seed-flag equivalence);
