@@ -163,7 +163,7 @@ blockrandom check
   exactly; the tool refuses a size that cannot. Give at least two sizes
   for a real trial: with one fixed size, the last allocations in each 
   block become predictable (a single size is accepted with a warning in 
-  the summary, audit.log, and methods.txt). **Required; never guessed.**
+  the summary and audit.log). **Required; never guessed.**
 - `--n-per-stratum` (alias `--n`) — how many allocations each stratum's
   list contains. The total list is this × the number of strata.
 - `--strata` — stratification factors as `name=level,level` chunks
