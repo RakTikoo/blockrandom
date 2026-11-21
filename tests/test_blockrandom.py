@@ -202,6 +202,32 @@ class BlockSizeTests(unittest.TestCase):
                     [r.position_in_block for r in block],
                     list(range(1, len(block) + 1)))
 
+    def test_single_block_size_warns_in_summary_and_audit_log(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            proc = run_cli(
+                "generate", "--arms", "A,B", "--ratio", "1:1",
+                "--blocks", "4", "--n-per-stratum", "16",
+                "--seed", SEED, "--out-dir", str(out))
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            self.assertIn("predictable", proc.stdout)
+            audit = (out / "audit.log").read_text()
+            self.assertIn("predictable", audit)
+
+    def test_multiple_block_sizes_emit_no_warning(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            proc = run_cli(
+                "generate", "--arms", "A,B", "--ratio", "1:1",
+                "--blocks", "4,6,8", "--n-per-stratum", "16",
+                "--seed", SEED, "--out-dir", str(out))
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            self.assertNotIn("WARNING", proc.stdout)
+            self.assertNotIn("predictable", proc.stdout)
+            audit = (out / "audit.log").read_text()
+            self.assertNotIn("WARNING", audit)
+            self.assertNotIn("predictable", audit)            
+
 
 class StratificationTests(unittest.TestCase):
     def test_total_counts_match_plan(self):

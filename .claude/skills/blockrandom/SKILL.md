@@ -31,8 +31,9 @@ blockrandom generate --trial-name "Example trial" --arms Treatment,Control --rat
 ```
 
 - `--arms` (at least two, all different), `--ratio` (one whole number per arm; `2:1` and three-arm
-  ratios work), `--blocks` and `--n-per-stratum` are required and never guessed. Every block size
-  must be a multiple of the ratio sum; give at least two sizes for a real trial.
+  ratios work), `--blocks` and `--n-per-stratum` are required and never guessed. Every block size 
+  must be a multiple of the ratio sum; give at least two sizes for a real trial (a single size is 
+  accepted with a warning in the summary and audit.log).
 - `--strata` takes `name=level,level` chunks separated by semicolons (omit for one unstratified
   list); each stratum gets its own sequence of `--n-per-stratum` allocations.
 - Exactly one of `--seed TEXT` or `--seed-file FILE` is required. The seed itself is never written

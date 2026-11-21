@@ -202,6 +202,8 @@ def cmd_generate(args):
           f"(ratio {core._ratio_text(ratio)})")
     print(f"  block sizes : {core._blocks_text(block_sizes)} "
           "(drawn at random per block)")
+    if len(block_sizes) == 1:
+        print("  WARNING  : A single block size makes the end of each block predictable and at least two sizes are recommended for a real trial.")
     print(f"  strata      : {len(strata_labels)} list(s) x "
           f"{n} allocations")
     print(f"  seed        : SHA-256 {seed_hash} "
